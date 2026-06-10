@@ -319,5 +319,4 @@
 .divider-ornament::before, .divider-ornament::after {
   content: ""; flex: 1; height: 1px;
   background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--saffron) 50%, transparent), transparent);
-  }
 }
