@@ -5,12 +5,12 @@ export function MobileActionBar() {
   return (
     <div className="md:hidden fixed inset-x-0 bottom-0 z-40 bg-background/95 backdrop-blur-xl border-t border-border shadow-soft">
       <div className="grid grid-cols-3 text-xs font-semibold">
-        <a href="tel:+91919836832967" className="flex flex-col items-center gap-1 py-3 text-foreground hover:text-saffron">
+        <a href="tel:+919836832967" className="flex flex-col items-center gap-1 py-3 text-foreground hover:text-saffron">
           <Phone className="h-5 w-5" />
           Call
         </a>
         <a
-          href="https://wa.me/91919836832967"
+          href="https://wa.me/919836832967"
           target="_blank" rel="noreferrer"
           className="flex flex-col items-center gap-1 py-3 text-foreground hover:text-saffron border-x border-border"
         >

@@ -25,7 +25,7 @@ export function SiteFooter() {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="tel:+91919836832967"
+                href="tel:+919836832967"
                 className="h-10 w-10 rounded-full border border-white/15 flex items-center justify-center hover:border-saffron hover:text-saffron transition-colors"
                 aria-label="Call"
               >
@@ -60,7 +60,7 @@ export function SiteFooter() {
               B-16/19, A-B Connector, Block B,<br /> Kolkata 741235
             </p>
             <p className="mt-4 text-sm">Open daily<br /> 12:00 – 23:30</p>
-            <a href="tel:+91919836832967" className="mt-4 inline-block text-sm text-gold hover:text-saffron">
+            <a href="tel:+919836832967" className="mt-4 inline-block text-sm text-gold hover:text-saffron">
               +91 98368 32967
             </a>
           </div>
