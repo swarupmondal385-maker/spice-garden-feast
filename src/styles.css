@@ -63,7 +63,7 @@
 
 :root {
   --radius: 0.5rem;
-  /* Spice Garden — warm, festive, premium */
+  /* Royal Hut — warm, festive, premium */
   --background: oklch(0.97 0.018 80);          /* warm cream */
   --foreground: oklch(0.18 0.025 40);          /* deep cocoa ink */
   --card: oklch(0.99 0.01 80);

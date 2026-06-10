@@ -7,9 +7,9 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/meal-plans")({
   head: () => ({
     meta: [
-      { title: "Meal Plans — Office Lunch & Diet | Spice Garden" },
+      { title: "Meal Plans — Office Lunch & Diet | Royal Hut" },
       { name: "description", content: "Monthly subscriptions for office lunch and personalised diet plans, delivered across central Kolkata." },
-      { property: "og:title", content: "Meal Plans — Spice Garden" },
+      { property: "og:title", content: "Meal Plans — Royal Hut" },
       { property: "og:description", content: "Office lunch and diet subscriptions cooked daily, delivered fresh." },
     ],
   }),

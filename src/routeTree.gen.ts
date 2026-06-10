@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VisitRouteImport } from './routes/visit'
 import { Route as MenuRouteImport } from './routes/menu'
 import { Route as MealPlansRouteImport } from './routes/meal-plans'
 import { Route as LoyaltyRouteImport } from './routes/loyalty'
@@ -18,6 +19,11 @@ import { Route as BookRouteImport } from './routes/book'
 import { Route as AccountRouteImport } from './routes/account'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VisitRoute = VisitRouteImport.update({
+  id: '/visit',
+  path: '/visit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MenuRoute = MenuRouteImport.update({
   id: '/menu',
   path: '/menu',
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/loyalty': typeof LoyaltyRoute
   '/meal-plans': typeof MealPlansRoute
   '/menu': typeof MenuRoute
+  '/visit': typeof VisitRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/loyalty': typeof LoyaltyRoute
   '/meal-plans': typeof MealPlansRoute
   '/menu': typeof MenuRoute
+  '/visit': typeof VisitRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/loyalty': typeof LoyaltyRoute
   '/meal-plans': typeof MealPlansRoute
   '/menu': typeof MenuRoute
+  '/visit': typeof VisitRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/loyalty'
     | '/meal-plans'
     | '/menu'
+    | '/visit'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/loyalty'
     | '/meal-plans'
     | '/menu'
+    | '/visit'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/loyalty'
     | '/meal-plans'
     | '/menu'
+    | '/visit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,10 +144,18 @@ export interface RootRouteChildren {
   LoyaltyRoute: typeof LoyaltyRoute
   MealPlansRoute: typeof MealPlansRoute
   MenuRoute: typeof MenuRoute
+  VisitRoute: typeof VisitRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/visit': {
+      id: '/visit'
+      path: '/visit'
+      fullPath: '/visit'
+      preLoaderRoute: typeof VisitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/menu': {
       id: '/menu'
       path: '/menu'
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   LoyaltyRoute: LoyaltyRoute,
   MealPlansRoute: MealPlansRoute,
   MenuRoute: MenuRoute,
+  VisitRoute: VisitRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -6,6 +6,7 @@ import { Wordmark } from "./Wordmark";
 const NAV = [
   { to: "/menu", label: "Menu" },
   { to: "/book", label: "Reserve" },
+  { to: "/visit", label: "Visit" },
   { to: "/meal-plans", label: "Meal Plans" },
   { to: "/catering", label: "Catering" },
   { to: "/loyalty", label: "Rewards" },

@@ -6,9 +6,9 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/loyalty")({
   head: () => ({
     meta: [
-      { title: "Garden Rewards — Loyalty Program | Spice Garden" },
+      { title: "Garden Rewards — Loyalty Program | Royal Hut" },
       { name: "description", content: "Earn Garden Coins on every order, redeem for thalis and desserts, and unlock private chef experiences." },
-      { property: "og:title", content: "Garden Rewards — Spice Garden" },
+      { property: "og:title", content: "Garden Rewards — Royal Hut" },
       { property: "og:description", content: "Loyalty, referrals and tiered perks for our regulars." },
     ],
   }),
