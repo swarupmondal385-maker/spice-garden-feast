@@ -63,6 +63,7 @@ function Index() {
       <InstagramStrip />
       <GiftCards />
       <FaqSection />
+      <MapSection />
       <FinalCTA />
     </div>
   );
