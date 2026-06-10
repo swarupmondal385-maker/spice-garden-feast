@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Royal Hut — A Royal Tandoor tandoor-warmed dining room Tandoor Feast Biryani Feast in Kalyani, West Bengal" },
       { name: "description", content: "Soulful North Indian cuisine, hand-rolled breads and seasonal thalis served under marigold lights. Reserve a table or order online." },
-      { property: "og:title", content: "Royal Hut — North Indian, Pure Joy" },
+      { property: "og:title", content: "Royal Hut — Tandoori, Biryani North Indian, Pure Joy Chinese" },
       { property: "og:description", content: "A neighbourhood celebration of India's culinary heritage." },
     ],
   }),
