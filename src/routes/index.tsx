@@ -18,10 +18,10 @@ import { Marquee } from "@/components/site/Marquee";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Royal Hut — A Tandoor House Vegetarian Feast in Kalyani, West Bengal" },
-      { name: "description", content: "Soulful North Indian Indian cuisine, hand-rolled breads and seasonal thalis served under marigold lights. Reserve a table or order online." },
+      { title: "Royal Hut — A Royal Tandoor tandoor-warmed dining room Tandoor Feast Biryani Feast in Kalyani, West Bengal" },
+      { name: "description", content: "Soulful North Indian cuisine, hand-rolled breads and seasonal thalis served under marigold lights. Reserve a table or order online." },
       { property: "og:title", content: "Royal Hut — North Indian, Pure Joy" },
-      { property: "og:description", content: "Park Street's rooftop celebration of India's vegetarian heritage." },
+      { property: "og:description", content: "A neighbourhood celebration of India's culinary heritage." },
     ],
   }),
   component: Index,
@@ -36,7 +36,7 @@ const DISHES = [
 
 const TESTIMONIALS = [
   { name: "Ananya Sen", role: "Kolkata", text: "The dal makhani is a religious experience. Service that makes you feel like family." },
-  { name: "Rohan Mehra", role: "Bengaluru", text: "Every dish arrived like a small ceremony. The rooftop at dusk — unforgettable." },
+  { name: "Rohan Mehra", role: "Bengaluru", text: "Every dish arrived like a small ceremony. The tandoor smoke at dusk — unforgettable." },
   { name: "Priya & Vikram", role: "Anniversary", text: "They turned our anniversary into a feast. Marigolds on the table, kheer on the house." },
 ];
 
@@ -44,7 +44,7 @@ const FAQ = [
   { q: "Where do you deliver?", a: "We deliver across central Kolkata — Park Street, Esplanade, Camac Street, AJC Bose Road and most of the 741235 / 741245 / 741246 belt. Outside that, please call us." },
   { q: "How early should I reserve?", a: "Weekends fill 5–7 days ahead. For weekday lunch or pre-theatre dinner, same-day reservations usually work." },
   { q: "Is the entire menu North Indian?", a: "Always. Royal Hut has been 100% North Indian since the day we opened. Many dishes are also Jain-friendly on request." },
-  { q: "Do you host private events?", a: "Yes — our rooftop seats 60 and the indoor hall seats 90. Use the Catering form to start a conversation." },
+  { q: "Do you host private events?", a: "Yes — the main hall seats 60 and the indoor hall seats 90. Use the Catering form to start a conversation." },
   { q: "Are corporate meal plans customisable?", a: "Absolutely. Office lunch and diet plans can be tuned for calories, allergens and cuisine rotation." },
 ];
 
@@ -95,7 +95,7 @@ function Hero() {
         </motion.p>
 
         <h1 className="mt-6 font-display text-[clamp(2.6rem,8vw,7rem)] leading-[0.95] text-[oklch(0.96_0.02_80)] max-w-5xl">
-          {"A rooftop feast".split(" ").map((w, i) => (
+          {"A tandoor feast".split(" ").map((w, i) => (
             <motion.span key={i} initial={{ opacity: 0, y: 60, filter: "blur(10px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0)" }}
               transition={{ delay: 0.35 + i * 0.12, duration: 1, ease: [0.2,0.7,0.2,1] }}
               className="inline-block mr-[0.25em]">{w}</motion.span>
@@ -108,7 +108,7 @@ function Hero() {
 
         <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1, duration: 0.9 }}
           className="mt-7 max-w-xl text-base md:text-lg text-[oklch(0.92_0.02_80)]/80 leading-relaxed">
-          Soulful North Indian Indian cuisine — slow-cooked dals, hand-rolled breads
+          Soulful North Indian cuisine — slow-cooked dals, hand-rolled breads
           and seasonal thalis, served under marigold lights with a view of the city
           that taught us to cook.
         </motion.p>
@@ -239,7 +239,7 @@ function RoomAndStory() {
       <div className="mx-auto max-w-7xl px-5 md:px-8 grid lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7 relative">
           <div className="relative aspect-[5/4] overflow-hidden rounded-3xl shadow-warm">
-            <motion.img style={{ y: yImg }} src={interior} alt="Tandoor House interior" loading="lazy"
+            <motion.img style={{ y: yImg }} src={interior} alt="Royal Hut dining room" loading="lazy"
               className="absolute inset-0 h-[120%] w-full object-cover" />
           </div>
           <div className="absolute -bottom-10 -right-6 md:-right-12 w-44 md:w-64 aspect-square rounded-2xl overflow-hidden shadow-soft border-4 border-background rotate-3">
@@ -250,14 +250,14 @@ function RoomAndStory() {
         <div className="lg:col-span-5">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.35em] text-saffron flex items-center gap-3">
-              <Leaf className="h-4 w-4" /> Our Tandoor House
+              <Leaf className="h-4 w-4" /> Our House
             </p>
             <h2 className="mt-4 font-display text-4xl md:text-5xl leading-[1.05]">
               Marigold lights. <br />
               <span className="font-script text-saffron font-normal">A view of the city</span> we love.
             </h2>
             <p className="mt-6 text-base text-muted-foreground leading-relaxed">
-              Tucked beside the ITI More Durga Puja Ground, our rooftop is a little garden of brass
+              Tucked beside the ITI More Durga Puja Ground, our dining hall is a little garden of brass
               lamps, hanging plants and slow conversations. The food is grandma's
               technique — restaurant precision. We've cooked here for sixteen years,
               and we're still excited every evening.
@@ -272,7 +272,7 @@ function RoomAndStory() {
                 <p className="mt-2">Mon — Sun<br /> 12:00 – 23:30</p>
               </div>
             </div>
-            <Link to="/book" className="btn-warm mt-10">Reserve your evening <ArrowRight className="h-4 w-4" /></Link>
+            <Link to="/book" className="btn-warm mt-10">Reserve a table <ArrowRight className="h-4 w-4" /></Link>
           </Reveal>
         </div>
       </div>

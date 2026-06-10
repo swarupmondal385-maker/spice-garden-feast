@@ -9,9 +9,9 @@ export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
       { title: "Reserve a Table — Royal Hut Park Street" },
-      { name: "description", content: "Book a rooftop table at Royal Hut or plan a private event in the heart of Kalyani, West Bengal." },
+      { name: "description", content: "Reserve a table at Royal Hut or plan a private event in the heart of Kalyani, West Bengal." },
       { property: "og:title", content: "Reserve a Table — Royal Hut" },
-      { property: "og:description", content: "Tandoor House reservations & private events in Kalyani, West Bengal." },
+      { property: "og:description", content: "Table reservations & private events in Kalyani, West Bengal." },
     ],
   }),
   component: BookPage,
@@ -86,7 +86,7 @@ function BookPage() {
 
         <Reveal delay={1} className="lg:col-span-5">
           <div className="rounded-3xl overflow-hidden shadow-warm">
-            <img src={interior} alt="Tandoor House seating" className="w-full h-64 object-cover" loading="lazy" />
+            <img src={interior} alt="Royal Hut dining room" className="w-full h-64 object-cover" loading="lazy" />
           </div>
           <ul className="mt-8 space-y-5 text-sm">
             <li className="flex items-start gap-4"><MapPin className="h-5 w-5 text-saffron mt-0.5" /><div><p className="font-semibold">B-16/19, A-B Connector, Block B</p><p className="text-muted-foreground">Kolkata 741235</p></div></li>

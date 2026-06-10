@@ -11,7 +11,7 @@ export function SiteFooter() {
           <div className="md:col-span-2">
             <Wordmark className="[&_span]:!text-[oklch(0.95_0.02_80)] [&_span.font-script]:!text-gold" />
             <p className="mt-5 max-w-md text-sm leading-relaxed text-[oklch(0.85_0.02_80)]/80">
-              A rooftop tribute to India's vegetarian heritage — slow-cooked dals,
+              A neighbourhood tribute to India's culinary heritage — slow-cooked dals,
               hand-rolled breads and seasonal thalis served under marigold lights
               in the heart of Kalyani, West Bengal.
             </p>
