@@ -15,6 +15,89 @@ import { Counter } from "@/components/site/Counter";
 import { SpiceParticles } from "@/components/site/SpiceParticles";
 import { Marquee } from "@/components/site/Marquee";
 
+const ADDRESS_FULL = "ITI More Durga Puja Ground, B-16/19, A-B Connector, Block B, Kalyani, West Bengal 741235";
+const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS_FULL)}&z=16&output=embed`;
+const MAPS_DIR = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(ADDRESS_FULL)}`;
+const MAPS_PLACE = "https://maps.app.goo.gl/JS1iMncr1yQZgZk86";
+
+function MapSection() {
+  return (
+    <section id="find-us" className="relative py-24 md:py-32 bg-muted/40">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <Reveal>
+            <p className="text-xs uppercase tracking-[0.35em] text-saffron flex items-center gap-3">
+              <MapPin className="h-4 w-4" /> Find us on the map
+            </p>
+            <h2 className="mt-4 font-display text-4xl md:text-6xl max-w-2xl leading-[1.05]">
+              Beside the <span className="font-script text-saffron font-normal">Durga Puja</span> ground.
+            </h2>
+            <p className="mt-5 max-w-lg text-muted-foreground leading-relaxed">
+              Pinch, drag, and zoom — explore the neighbourhood. We're on the A-B
+              Connector, two minutes from Kalyani ITI More. Free parking out front.
+            </p>
+          </Reveal>
+          <Reveal delay={1}>
+            <div className="flex flex-wrap gap-3">
+              <a href={MAPS_DIR} target="_blank" rel="noreferrer" className="btn-warm">Get directions <ArrowRight className="h-4 w-4" /></a>
+              <Link to="/visit" className="btn-ghost-warm">Visit details</Link>
+            </div>
+          </Reveal>
+        </div>
+
+        <div className="mt-12 grid lg:grid-cols-12 gap-6">
+          <Reveal className="lg:col-span-8">
+            <div className="relative rounded-3xl overflow-hidden shadow-warm border border-border bg-card">
+              <div className="aspect-[16/10] md:aspect-[16/9]">
+                <iframe
+                  title="Royal Hut on Google Maps"
+                  src={MAPS_EMBED}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-full w-full border-0"
+                />
+              </div>
+              <a href={MAPS_PLACE} target="_blank" rel="noreferrer"
+                className="absolute top-4 right-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] px-3 py-2 rounded-full bg-background/95 backdrop-blur-xl border border-border shadow-soft hover:text-saffron">
+                Open in Maps <ArrowRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </Reveal>
+
+          <Reveal delay={1} className="lg:col-span-4">
+            <div className="card-warm p-7 h-full flex flex-col">
+              <p className="text-xs uppercase tracking-[0.3em] text-saffron">Royal Hut · Kalyani</p>
+              <p className="mt-3 font-display text-2xl leading-tight">B-16/19, A-B Connector,<br />Block B, Kalyani 741235</p>
+              <p className="mt-2 text-xs text-muted-foreground">Plus code · XCJQ+39</p>
+              <div className="mt-6 space-y-4 text-sm">
+                <div className="flex items-start gap-3">
+                  <Clock className="h-4 w-4 text-saffron mt-0.5" />
+                  <div>
+                    <p className="font-semibold">Mon – Thu &nbsp;11:30 AM – 11:00 PM</p>
+                    <p className="text-muted-foreground">Fri – Sun &nbsp;11:30 AM – 11:30 PM</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-4 w-4 text-saffron mt-0.5" />
+                  <div>
+                    <p className="font-semibold">Free off-street parking</p>
+                    <p className="text-muted-foreground">Valet on Fri–Sun evenings</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-auto pt-6 grid grid-cols-2 gap-3">
+                <a href="tel:+919836832967" className="btn-warm justify-center text-sm !py-3">Call us</a>
+                <a href="https://wa.me/919836832967?text=Hi%20Royal%20Hut%21" target="_blank" rel="noreferrer" className="btn-ghost-warm justify-center text-sm !py-3">WhatsApp</a>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -63,6 +146,7 @@ function Index() {
       <InstagramStrip />
       <GiftCards />
       <FaqSection />
+      <MapSection />
       <FinalCTA />
     </div>
   );
