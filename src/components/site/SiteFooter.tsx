@@ -46,10 +46,15 @@ export function SiteFooter() {
             <ul className="space-y-2.5 text-sm">
               <li><Link to="/menu" className="hover:text-saffron">Menu</Link></li>
               <li><Link to="/book" className="hover:text-saffron">Reservations</Link></li>
+              <li><Link to="/visit" className="hover:text-saffron">Visit & Map</Link></li>
+              <li><Link to="/chefs-table" className="hover:text-saffron">Chef's Table</Link></li>
+              <li><Link to="/about" className="hover:text-saffron">Our Story</Link></li>
+              <li><Link to="/gallery" className="hover:text-saffron">Gallery</Link></li>
               <li><Link to="/catering" className="hover:text-saffron">Catering</Link></li>
               <li><Link to="/meal-plans" className="hover:text-saffron">Meal Plans</Link></li>
               <li><Link to="/gift-cards" className="hover:text-saffron">Gift Cards</Link></li>
               <li><Link to="/loyalty" className="hover:text-saffron">Rewards</Link></li>
+              <li><Link to="/faq" className="hover:text-saffron">Help & FAQs</Link></li>
             </ul>
           </div>
 
