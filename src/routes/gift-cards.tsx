@@ -7,9 +7,9 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/gift-cards")({
   head: () => ({
     meta: [
-      { title: "Digital Gift Cards — Spice Garden Kolkata" },
-      { name: "description", content: "Send a Spice Garden gift card on WhatsApp or email — redeemable in-store, online and for events." },
-      { property: "og:title", content: "Spice Garden Gift Cards" },
+      { title: "Digital Gift Cards — Royal Hut Kolkata" },
+      { name: "description", content: "Send a Royal Hut gift card on WhatsApp or email — redeemable in-store, online and for events." },
+      { property: "og:title", content: "Royal Hut Gift Cards" },
       { property: "og:description", content: "Instant digital gift cards from ₹500 to ₹25,000." },
     ],
   }),
@@ -34,7 +34,7 @@ function GiftCardPage() {
             <div className="aspect-[16/10] rounded-3xl bg-gradient-to-br from-saffron via-rose to-terracotta p-1 shadow-warm">
               <div className="h-full rounded-3xl bg-ink p-8 md:p-10 flex flex-col justify-between text-[oklch(0.96_0.02_80)]">
                 <div className="flex items-center justify-between">
-                  <span className="font-script text-2xl text-gold">Spice Garden</span>
+                  <span className="font-script text-2xl text-gold">Royal Hut</span>
                   <Gift className="h-6 w-6 text-gold" />
                 </div>
                 <div>

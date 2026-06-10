@@ -13,9 +13,9 @@ import heroThali from "@/assets/hero-thali.jpg";
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "Menu & Online Order — Spice Garden, Kolkata" },
-      { name: "description", content: "Browse our pure-vegetarian menu and order online for delivery across central Kolkata." },
-      { property: "og:title", content: "Spice Garden — Menu" },
+      { title: "Menu & Online Order — Royal Hut, Kolkata" },
+      { name: "description", content: "Browse our North Indian menu and order online for delivery across central Kolkata." },
+      { property: "og:title", content: "Royal Hut — Menu" },
       { property: "og:description", content: "Signature thalis, tandoor classics and seasonal specials." },
     ],
   }),
@@ -84,7 +84,7 @@ function MenuPage() {
 
   return (
     <div>
-      <PageHeader eyebrow="The Menu" title="Pure vegetarian." accent="Soulfully cooked.">
+      <PageHeader eyebrow="The Menu" title="North Indian." accent="Soulfully cooked.">
         Pick from sixteen years of recipes. Add to cart, checkout in seconds — we'll deliver
         across central Kolkata or have it ready at the door.
       </PageHeader>

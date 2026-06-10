@@ -7,9 +7,9 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/account")({
   head: () => ({
     meta: [
-      { title: "Sign in — Spice Garden Rewards" },
-      { name: "description", content: "Sign in or create your Spice Garden account to track orders, earn Garden Coins and manage reservations." },
-      { property: "og:title", content: "Spice Garden — Account" },
+      { title: "Sign in — Royal Hut Rewards" },
+      { name: "description", content: "Sign in or create your Royal Hut account to track orders, earn Garden Coins and manage reservations." },
+      { property: "og:title", content: "Royal Hut — Account" },
       { property: "og:description", content: "Your rewards, orders and reservations in one place." },
     ],
   }),

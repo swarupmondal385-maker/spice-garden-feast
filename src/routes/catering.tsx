@@ -8,9 +8,9 @@ import heroThali from "@/assets/hero-thali.jpg";
 export const Route = createFileRoute("/catering")({
   head: () => ({
     meta: [
-      { title: "Catering & Corporate Orders — Spice Garden Kolkata" },
-      { name: "description", content: "From boardroom lunches to weddings — pure-vegetarian catering with live stations across Kolkata." },
-      { property: "og:title", content: "Catering — Spice Garden" },
+      { title: "Catering & Corporate Orders — Royal Hut Kolkata" },
+      { name: "description", content: "From boardroom lunches to weddings — North Indian catering with live stations across Kolkata." },
+      { property: "og:title", content: "Catering — Royal Hut" },
       { property: "og:description", content: "Weddings, conferences, intimate dinners. We cook, plate and serve." },
     ],
   }),
@@ -22,7 +22,7 @@ function CateringPage() {
   return (
     <div>
       <PageHeader eyebrow="Catering & Corporate" title="You celebrate." accent="We'll cook.">
-        Weddings, board lunches, intimate dinners, festive offices — pure-vegetarian
+        Weddings, board lunches, intimate dinners, festive offices — North Indian
         menus from 20 to 2,000 guests, with live tandoor and chaat stations.
       </PageHeader>
 

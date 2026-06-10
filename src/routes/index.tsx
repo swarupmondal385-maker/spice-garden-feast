@@ -18,9 +18,9 @@ import { Marquee } from "@/components/site/Marquee";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Spice Garden — A Rooftop Vegetarian Feast in Park Street, Kolkata" },
-      { name: "description", content: "Soulful pure-vegetarian Indian cuisine, hand-rolled breads and seasonal thalis served under marigold lights. Reserve a table or order online." },
-      { property: "og:title", content: "Spice Garden — Pure Vegetarian, Pure Joy" },
+      { title: "Royal Hut — A Tandoor House Vegetarian Feast in Kalyani, West Bengal" },
+      { name: "description", content: "Soulful North Indian Indian cuisine, hand-rolled breads and seasonal thalis served under marigold lights. Reserve a table or order online." },
+      { property: "og:title", content: "Royal Hut — North Indian, Pure Joy" },
       { property: "og:description", content: "Park Street's rooftop celebration of India's vegetarian heritage." },
     ],
   }),
@@ -41,9 +41,9 @@ const TESTIMONIALS = [
 ];
 
 const FAQ = [
-  { q: "Where do you deliver?", a: "We deliver across central Kolkata — Park Street, Esplanade, Camac Street, AJC Bose Road and most of the 700016/700019/700020 belt. Outside that, please call us." },
+  { q: "Where do you deliver?", a: "We deliver across central Kolkata — Park Street, Esplanade, Camac Street, AJC Bose Road and most of the 741235 / 741245 / 741246 belt. Outside that, please call us." },
   { q: "How early should I reserve?", a: "Weekends fill 5–7 days ahead. For weekday lunch or pre-theatre dinner, same-day reservations usually work." },
-  { q: "Is the entire menu pure-vegetarian?", a: "Always. Spice Garden has been 100% pure-vegetarian since the day we opened. Many dishes are also Jain-friendly on request." },
+  { q: "Is the entire menu North Indian?", a: "Always. Royal Hut has been 100% North Indian since the day we opened. Many dishes are also Jain-friendly on request." },
   { q: "Do you host private events?", a: "Yes — our rooftop seats 60 and the indoor hall seats 90. Use the Catering form to start a conversation." },
   { q: "Are corporate meal plans customisable?", a: "Absolutely. Office lunch and diet plans can be tuned for calories, allergens and cuisine rotation." },
 ];
@@ -79,7 +79,7 @@ function Hero() {
   return (
     <section ref={ref} className="relative min-h-[100svh] grain overflow-hidden bg-ink">
       <motion.div style={{ y, scale }} className="absolute inset-0">
-        <img src={heroThali} alt="Royal Spice Garden thali" className="h-full w-full object-cover opacity-70" />
+        <img src={heroThali} alt="Royal Royal Hut thali" className="h-full w-full object-cover opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.12_0.02_35)]/85 via-[oklch(0.12_0.02_35)]/40 to-[oklch(0.12_0.02_35)]/95" />
       </motion.div>
 
@@ -91,7 +91,7 @@ function Hero() {
           className="inline-flex items-center gap-2 text-gold/90 text-xs md:text-sm uppercase tracking-[0.35em]"
         >
           <span className="h-px w-10 bg-gold/60" />
-          Park Street · Kolkata · Since 2009
+          Kalyani · West Bengal · Since 2014
         </motion.p>
 
         <h1 className="mt-6 font-display text-[clamp(2.6rem,8vw,7rem)] leading-[0.95] text-[oklch(0.96_0.02_80)] max-w-5xl">
@@ -108,7 +108,7 @@ function Hero() {
 
         <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1, duration: 0.9 }}
           className="mt-7 max-w-xl text-base md:text-lg text-[oklch(0.92_0.02_80)]/80 leading-relaxed">
-          Soulful pure-vegetarian Indian cuisine — slow-cooked dals, hand-rolled breads
+          Soulful North Indian Indian cuisine — slow-cooked dals, hand-rolled breads
           and seasonal thalis, served under marigold lights with a view of the city
           that taught us to cook.
         </motion.p>
@@ -154,13 +154,13 @@ function Stats() {
   const items = [
     { value: 1200000, suffix: "+", label: "Dishes served" },
     { value: 86000, suffix: "+", label: "Happy guests" },
-    { value: 16, suffix: " yrs", label: "On Park Street" },
+    { value: 16, suffix: " yrs", label: "Serving Kalyani" },
     { value: 48, suffix: "+", label: "Signature recipes" },
   ];
   return (
     <section className="mx-auto max-w-7xl px-5 md:px-8 py-24 md:py-32">
       <Reveal>
-        <p className="divider-ornament text-xs md:text-sm uppercase tracking-[0.35em]"><span className="px-2">The Spice Garden Story</span></p>
+        <p className="divider-ornament text-xs md:text-sm uppercase tracking-[0.35em]"><span className="px-2">The Royal Hut Story</span></p>
       </Reveal>
       <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-6">
         {items.map((s, i) => (
@@ -239,7 +239,7 @@ function RoomAndStory() {
       <div className="mx-auto max-w-7xl px-5 md:px-8 grid lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7 relative">
           <div className="relative aspect-[5/4] overflow-hidden rounded-3xl shadow-warm">
-            <motion.img style={{ y: yImg }} src={interior} alt="Rooftop interior" loading="lazy"
+            <motion.img style={{ y: yImg }} src={interior} alt="Tandoor House interior" loading="lazy"
               className="absolute inset-0 h-[120%] w-full object-cover" />
           </div>
           <div className="absolute -bottom-10 -right-6 md:-right-12 w-44 md:w-64 aspect-square rounded-2xl overflow-hidden shadow-soft border-4 border-background rotate-3">
@@ -250,14 +250,14 @@ function RoomAndStory() {
         <div className="lg:col-span-5">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.35em] text-saffron flex items-center gap-3">
-              <Leaf className="h-4 w-4" /> Our Rooftop
+              <Leaf className="h-4 w-4" /> Our Tandoor House
             </p>
             <h2 className="mt-4 font-display text-4xl md:text-5xl leading-[1.05]">
               Marigold lights. <br />
               <span className="font-script text-saffron font-normal">A view of the city</span> we love.
             </h2>
             <p className="mt-6 text-base text-muted-foreground leading-relaxed">
-              Four floors above Park Street, our rooftop is a little garden of brass
+              Tucked beside the ITI More Durga Puja Ground, our rooftop is a little garden of brass
               lamps, hanging plants and slow conversations. The food is grandma's
               technique — restaurant precision. We've cooked here for sixteen years,
               and we're still excited every evening.
@@ -265,7 +265,7 @@ function RoomAndStory() {
             <div className="mt-8 grid grid-cols-2 gap-6 text-sm">
               <div>
                 <p className="text-saffron font-semibold uppercase tracking-[0.2em] text-xs">Address</p>
-                <p className="mt-2">4th Floor, 27 Park Street,<br /> Kolkata 700016</p>
+                <p className="mt-2">B-16/19, A-B Connector, Block B,<br /> Kolkata 741235</p>
               </div>
               <div>
                 <p className="text-saffron font-semibold uppercase tracking-[0.2em] text-xs">Hours</p>
@@ -396,7 +396,7 @@ function Catering() {
         <Reveal className="lg:col-span-5">
           <p className="text-xs uppercase tracking-[0.35em] text-saffron">Catering & Corporate</p>
           <h2 className="mt-4 font-display text-4xl md:text-5xl leading-[1.05]">
-            Bring the <span className="font-script text-saffron font-normal">Spice Garden</span> to your celebration.
+            Bring the <span className="font-script text-saffron font-normal">Royal Hut</span> to your celebration.
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
             Weddings, board lunches, intimate dinners, festive offices — we cook,
@@ -492,11 +492,11 @@ function InstagramStrip() {
     <section className="py-20">
       <div className="mx-auto max-w-7xl px-5 md:px-8 flex flex-wrap items-end justify-between gap-4 mb-10">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.35em] text-saffron">@spicegarden.kolkata</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-saffron">@royalhut.kalyani</p>
           <h2 className="mt-3 font-display text-3xl md:text-4xl">From our kitchen, to the feed.</h2>
         </Reveal>
         <Reveal delay={1}>
-          <a href="https://instagram.com/spicegarden.kolkata" target="_blank" rel="noreferrer" className="btn-ghost-warm">
+          <a href="https://instagram.com/royalhut.kalyani" target="_blank" rel="noreferrer" className="btn-ghost-warm">
             Follow on Instagram <ArrowRight className="h-4 w-4" />
           </a>
         </Reveal>
@@ -504,9 +504,9 @@ function InstagramStrip() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 px-2 md:px-3">
         {imgs.map((src, i) => (
           <Reveal key={i} delay={i % 4}>
-            <a href="https://instagram.com/spicegarden.kolkata" target="_blank" rel="noreferrer"
+            <a href="https://instagram.com/royalhut.kalyani" target="_blank" rel="noreferrer"
               className="relative block aspect-square overflow-hidden rounded-xl group">
-              <img src={src} alt={`Spice Garden feed ${i+1}`} loading="lazy"
+              <img src={src} alt={`Royal Hut feed ${i+1}`} loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/60 transition-colors flex items-center justify-center">
                 <span className="text-[oklch(0.96_0.02_80)] opacity-0 group-hover:opacity-100 transition-opacity text-sm">View ↗</span>
@@ -529,7 +529,7 @@ function GiftCards() {
             <div className="aspect-[16/10] rounded-3xl bg-gradient-to-br from-saffron via-rose to-terracotta p-1 shadow-warm rotate-2 hover:rotate-0 transition-transform duration-700">
               <div className="h-full w-full rounded-3xl bg-ink/95 p-8 md:p-10 flex flex-col justify-between text-[oklch(0.96_0.02_80)]">
                 <div className="flex items-center justify-between">
-                  <span className="font-script text-2xl text-gold">Spice Garden</span>
+                  <span className="font-script text-2xl text-gold">Royal Hut</span>
                   <Gift className="h-6 w-6 text-gold" />
                 </div>
                 <div>
@@ -617,7 +617,7 @@ function FinalCTA() {
             <Link to="/menu" className="btn-ghost-warm !text-[oklch(0.95_0.02_80)] !border-white/30 hover:!border-saffron">Order Online</Link>
           </div>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-xs uppercase tracking-[0.25em] text-[oklch(0.92_0.02_80)]/70">
-            <span className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-saffron" /> Park Street, Kolkata</span>
+            <span className="flex items-center gap-2"><MapPin className="h-3.5 w-3.5 text-saffron" /> Kalyani, West Bengal</span>
             <span className="flex items-center gap-2"><Clock className="h-3.5 w-3.5 text-saffron" /> 12:00 – 23:30</span>
           </div>
         </Reveal>
