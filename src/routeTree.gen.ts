@@ -15,6 +15,7 @@ import { Route as MealPlansRouteImport } from './routes/meal-plans'
 import { Route as LoyaltyRouteImport } from './routes/loyalty'
 import { Route as GiftCardsRouteImport } from './routes/gift-cards'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ChefsTableRouteImport } from './routes/chefs-table'
 import { Route as CateringRouteImport } from './routes/catering'
 import { Route as BookRouteImport } from './routes/book'
@@ -50,6 +51,11 @@ const GiftCardsRoute = GiftCardsRouteImport.update({
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ChefsTableRoute = ChefsTableRouteImport.update({
@@ -90,6 +96,7 @@ export interface FileRoutesByFullPath {
   '/book': typeof BookRoute
   '/catering': typeof CateringRoute
   '/chefs-table': typeof ChefsTableRoute
+  '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
   '/gift-cards': typeof GiftCardsRoute
   '/loyalty': typeof LoyaltyRoute
@@ -104,6 +111,7 @@ export interface FileRoutesByTo {
   '/book': typeof BookRoute
   '/catering': typeof CateringRoute
   '/chefs-table': typeof ChefsTableRoute
+  '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
   '/gift-cards': typeof GiftCardsRoute
   '/loyalty': typeof LoyaltyRoute
@@ -119,6 +127,7 @@ export interface FileRoutesById {
   '/book': typeof BookRoute
   '/catering': typeof CateringRoute
   '/chefs-table': typeof ChefsTableRoute
+  '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
   '/gift-cards': typeof GiftCardsRoute
   '/loyalty': typeof LoyaltyRoute
@@ -135,6 +144,7 @@ export interface FileRouteTypes {
     | '/book'
     | '/catering'
     | '/chefs-table'
+    | '/faq'
     | '/gallery'
     | '/gift-cards'
     | '/loyalty'
@@ -149,6 +159,7 @@ export interface FileRouteTypes {
     | '/book'
     | '/catering'
     | '/chefs-table'
+    | '/faq'
     | '/gallery'
     | '/gift-cards'
     | '/loyalty'
@@ -163,6 +174,7 @@ export interface FileRouteTypes {
     | '/book'
     | '/catering'
     | '/chefs-table'
+    | '/faq'
     | '/gallery'
     | '/gift-cards'
     | '/loyalty'
@@ -178,6 +190,7 @@ export interface RootRouteChildren {
   BookRoute: typeof BookRoute
   CateringRoute: typeof CateringRoute
   ChefsTableRoute: typeof ChefsTableRoute
+  FaqRoute: typeof FaqRoute
   GalleryRoute: typeof GalleryRoute
   GiftCardsRoute: typeof GiftCardsRoute
   LoyaltyRoute: typeof LoyaltyRoute
@@ -228,6 +241,13 @@ declare module '@tanstack/react-router' {
       path: '/gallery'
       fullPath: '/gallery'
       preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/chefs-table': {
@@ -282,6 +302,7 @@ const rootRouteChildren: RootRouteChildren = {
   BookRoute: BookRoute,
   CateringRoute: CateringRoute,
   ChefsTableRoute: ChefsTableRoute,
+  FaqRoute: FaqRoute,
   GalleryRoute: GalleryRoute,
   GiftCardsRoute: GiftCardsRoute,
   LoyaltyRoute: LoyaltyRoute,
